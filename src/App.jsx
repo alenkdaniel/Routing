@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import Registration from './registration/Registration'
-import Login from './login/Login'
+import Login from './login/login'
 import Home from './home/Home'
 import { Route, Routes } from 'react-router-dom'
 
