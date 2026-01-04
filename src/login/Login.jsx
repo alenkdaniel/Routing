@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import "./login.css";
+import { useNavigate } from "react-router-dom";
+import "./Login.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -9,8 +9,7 @@ const Login = () => {
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
-    e.preventDefault(); 
-
+    e.preventDefault();
 
     if (email === "" || password === "") {
       alert("Please fill all fields");
@@ -44,12 +43,19 @@ const Login = () => {
             />
           </div>
 
+          {/* Login submit */}
           <button type="submit">Login</button>
 
-          <p className="signup-text">
-            Don’t have an account?
-            <Link href="/register" className="signup-link"> Sign up</Link>
-          </p>
+          <p className="signup-text">Don’t have an account?</p>
+
+          {/* Sign up navigation button */}
+          <button
+            type="button"
+            className="signup-btn"
+            onClick={() => navigate("/registration")}
+          >
+            Sign up
+          </button>
         </form>
       </div>
     </div>
